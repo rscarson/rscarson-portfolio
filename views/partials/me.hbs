@@ -1,0 +1,32 @@
+<h1>{{personal.name}}</h1>
+{{#if flags.error}}
+<div class="alert alert-danger alert-dismissible fade show ml-3 mr-3" role="alert">
+	<strong>Something went wrong!</strong> Please contact me using one of the other methods below, and I will correct the issue asap!
+	<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+		<span aria-hidden="true">&times;</span>
+	</button>
+</div>
+{{/if}}
+
+{{#if flags.sent}}
+<div class="alert alert-success alert-dismissible fade show ml-3 mr-3" role="alert">
+	<strong>Sent!</strong> I will get back to you as soon as I can!
+	<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+		<span aria-hidden="true">&times;</span>
+	</button>
+</div>
+{{/if}}
+
+<div class="mininav-container hidden-xs">
+	<ul class="nav nav-pills nav-fill">
+		<li class="nav-item">
+			<a class="nav-link mininav-btn" href="#projects">Projects</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link mininav-btn" href="#about">About</a>
+		</li>
+	</ul>
+</div>
+
+<h2>Software Developper</h2>
+{{>social}}

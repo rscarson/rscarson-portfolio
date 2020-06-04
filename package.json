@@ -1,0 +1,21 @@
+{
+  "name": "rscarson-portfolio",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "bootstrap-social": "^5.1.1",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "express-handlebars": "^4.0.4",
+    "handlebars-helpers": "^0.10.0",
+    "hbs": "~4.0.4",
+    "http-errors": "~1.6.3",
+    "mailgun-js": "^0.22.0",
+    "morgan": "~1.9.1"
+  }
+}

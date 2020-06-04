@@ -1,0 +1,26 @@
+<h2>About</h2>
+
+<div class="wide media">
+  <img src="https://github.com/rscarson.png" class="mr-3" alt="...">
+  <div class="media-body">
+    <h4 class="mt-0">{{personal.name}}</h4>
+    <p>{{personal.description}}</p>
+
+	<h5>Education</h5>
+	<ul>
+	{{#each education}}
+		<li>{{name}} ({{school}}) <small class="text-muted">{{start}} - {{end}}</small></li>
+	{{/each}}
+	</ul>
+
+	<h5>Work</h5>
+	<ul>
+	{{#each work}}
+		<li>{{position}} ({{employer}}) <small class="text-muted">{{start}} - {{end}}</small></li>
+	{{/each}}
+	</ul>
+
+	<h3>&nbsp;</h3>
+	{{>social}}
+  </div>
+</div>
