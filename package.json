@@ -13,7 +13,7 @@
     "express": "~4.16.1",
     "express-handlebars": "^4.0.4",
     "handlebars-helpers": "^0.10.0",
-    "hbs": "~4.0.4",
+    "hbs": "^4.1.1",
     "http-errors": "~1.6.3",
     "mailgun-js": "^0.22.0",
     "morgan": "~1.9.1"
