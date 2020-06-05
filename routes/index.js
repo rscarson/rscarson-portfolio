@@ -32,7 +32,10 @@ router.post('/contact', function(req, res, next) {
 		mail: { key, domain, from, to, subject }
 	} = config;
 
-	mailgun({key, domain});
+	mailgun = mailgun({
+		apiKey: key, 
+		domain: domain
+	});
 	var data = {
 		from: from,
 		to: to,

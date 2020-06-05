@@ -45,8 +45,8 @@ const config = {
 	],
 
 	mail: {
-		key: process.env.MAILGUN_APIKEY, 
-		domain: 'sandbox4a3c37a1b2884a9bbe909fe666a41add.mailgun.org',
+		key: process.env.MAILGUN_API_KEY,
+		domain: process.env.MAILGUN_DOMAIN,
 
 		from: 'app173255569@heroku.com',
 		to: 'rscarson@richardcarson.ca',

@@ -1,3 +1,21 @@
-<h1>{{message}}</h1>
-<h2>{{error.status}}</h2>
-<pre>{{error.stack}}</pre>
+<div class="background mountains">
+	<a id="top"></a>
+	<div class="page">
+		<h1>Something went wrong!</h1>
+		<h2>Something appears to have gone wrong; please contact me by one of the methods below, and I will get back to you as soon as I can!</h2>
+
+		<div class="mininav-container hidden-xs">
+			<ul class="nav nav-pills nav-fill">
+				<li class="nav-item">
+					<a class="nav-link mininav-btn" href="/">Back home</a>
+				</li>
+			</ul>
+		</div>
+		<br/><br/><br/>
+
+		<h4>{{message}}</h4>
+		<p>{{error.status}}</p>
+		<pre>{{error.stack}}</pre>
+		{{>social}}
+	</div>
+</div>
