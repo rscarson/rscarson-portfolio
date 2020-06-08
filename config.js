@@ -47,7 +47,7 @@ const config = {
 	mail: {
 		server: 'smtp.mailgun.org',
 		username: 'postmaster@sandbox4a3c37a1b2884a9bbe909fe666a41add.mailgun.org',
-		password: process.env.SMTP_PASSWORD,
+		password: process.env.MAILGUN_SMTP_PASSWORD,
 
 		from: 'Portfolio Mailer <postmaster@sandbox4a3c37a1b2884a9bbe909fe666a41add.mailgun.org>',
 		to: 'rscarson@richardcarson.ca',
