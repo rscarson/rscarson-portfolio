@@ -45,10 +45,11 @@ const config = {
 	],
 
 	mail: {
-		key: process.env.MAILGUN_API_KEY,
-		domain: process.env.MAILGUN_DOMAIN,
+		server: 'smtp.mailgun.org',
+		username: 'postmaster@sandbox4a3c37a1b2884a9bbe909fe666a41add.mailgun.org',
+		password: process.env.SMTP_PASSWORD,
 
-		from: 'app173255569@heroku.com',
+		from: 'Portfolio Mailer <postmaster@sandbox4a3c37a1b2884a9bbe909fe666a41add.mailgun.org>',
 		to: 'rscarson@richardcarson.ca',
 		subject: 'New message from portfolio'
 	}

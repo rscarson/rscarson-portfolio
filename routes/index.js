@@ -2,7 +2,8 @@ const config = require('../config');
 
 var express = require('express');
 var router = express.Router();
-var mailgun = require('mailgun-js');
+var nodemailer = require("nodemailer");
+var util = require('util');
 
 /* GET home page. */
 router.get('/:condition?', function(req, res, next) {
@@ -29,21 +30,26 @@ router.get('/:condition?', function(req, res, next) {
 
 router.post('/contact', function(req, res, next) {
 	const { 
-		mail: { key, domain, from, to, subject }
+		mail: { server, username, password, from, to, subject }
 	} = config;
 
-	mailgun = mailgun({
-		apiKey: key, 
-		domain: domain
+	let transporter = nodemailer.createTransport({
+		host: server,
+		port: 587,
+		secure: false,
+		auth: {
+			user: username,
+			pass: password
+		},
 	});
-	var data = {
+
+	transporter.sendMail({
 		from: from,
 		to: to,
 		subject: subject,
-		text: `{$req.body.name} <{$req.body.email}>:\n{$req.body.body}`
-	};
-
-	mailgun.messages().send(data, function (error, body) {
+		text: util.format('%s <%s>:\n%s', req.body.name, req.body.email, req.body.body),
+		html: util.format('<strong>%s (%s)</strong>:<br/><hr/>%s', req.body.name, req.body.email, req.body.body),
+	}, function (error, info) {
 		if (error) {
 			console.log('Sending contact email... ' + error);
 			res.redirect('/error');
