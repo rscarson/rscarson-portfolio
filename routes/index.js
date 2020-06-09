@@ -35,8 +35,8 @@ router.post('/contact', function(req, res, next) {
 
 	let transporter = nodemailer.createTransport({
 		host: server,
-		port: 587,
-		secure: false,
+		port: 465,
+		secure: true,
 		auth: {
 			user: username,
 			pass: password
