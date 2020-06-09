@@ -21,20 +21,33 @@
 </head>
 
 <body>
-
 <nav class="navbar navbar-light fixed-top">
- <div class="dropdown">
-  <button class="btn btn-light" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#top">Back to Top</a>
-    <a class="dropdown-item" target="_blank" href="{{social.resume}}">Download Resume</a>
-    <div class="dropdown-divider"></div>
-    <a class="dropdown-item" href="#projects">Projects</a>
-    <a class="dropdown-item" href="#about">About</a>
-  </div>
-</div>
+	<div class="nav">
+		<a href="#top" class="btn btn-dark" type="button">
+			Back to Top
+		</a>&nbsp;
+
+		<a href="#about" class="btn btn-dark" type="button">
+			About
+		</a>&nbsp;
+
+		<a href="#projects" class="btn btn-dark" type="button">
+			Projects
+		</a>&nbsp;
+
+		<div class="dropdown">
+			<button class="btn btn-light" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+				<a class="dropdown-item" href="#top">Back to Top</a>
+				<a class="dropdown-item" target="_blank" href="{{social.resume}}">Download Resume</a>
+				<div class="dropdown-divider"></div>
+				<a class="dropdown-item" href="#projects">Projects</a>
+				<a class="dropdown-item" href="#about">About</a>
+			</div>
+		</div>
+	</div>
 </nav>
 
 	{{{body}}}
