@@ -28,6 +28,10 @@ html, body {
   background-size: cover;
 }
 
+.nav-btn {
+  margin-right: 5px;
+}
+
 .page {
   padding-top: 52px;
   min-height: 100vh;
